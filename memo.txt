@@ -1,0 +1,80 @@
+np.array([a,b,c])
+[a,b,c]というリストからNumPy用の配列を生成する
+
+np.arange(n)
+0からn-1までの行列を生成する
+
+np.reshape(m,n)
+m行n列にshapeし直す
+
+np.argmin(x)
+NumPy配列xのうち、一番小さい値のポジションを返す
+
+np.argmax(x)
+NumPy配列xのうち、一番大きい値のポジションを返す
+
+np.abs(V)
+行列Vの絶対値を返す
+
+np.zeros(n)
+0がn個の配列を作る
+np.zeros(10))
+
+np.ones(n)
+1がn個の配列を作るn
+np.ones(10)
+
+np.astype(hoge)
+NumPy配列の型をhogeに変換する
+y = array([False, True, True], dtype=bool)
+だった場合
+y = y.astype(np.int) # np.int は NumPyのint型
+とすると
+array([0,1,1])
+に変換される
+
+np.exp(x)
+xの指数関数を表す
+np.exp(-x)
+
+np.maximum(a,b)
+入力されたa,bのうちどちらか大きい値を返す
+np.maximum(0, 100) # return 100
+
+np.ndim()
+配列の次元数を取得する
+B = np.array([[1,2], [3,4], [5,6]])
+np.ndim(B) # 2
+
+np.dot(A,B)
+AとBの行列の積を計算する
+A = np.array([[1,2,3], [4,5,6]])
+A.shape # (2,3)
+B = np.array([[1,2], [3,4], [5,6]])
+B.shape # (3,2)
+np.dot(A,B)
+# array([[22,28],
+#        [49,64]])
+
+np.random.choice(x,y)
+0 <= n < x となる数字をy個選び出す
+np.random.choice(60000, 10)
+
+np.random.uniform(x,y (,z))
+x <= n < y となる実数nを出力する。(zが引数として存在する場合は、z個の配列を返す）
+
+np.sum(x)
+NumPy配列xの各要素の総和を計算する
+x = np.arange(10)
+np.sum(x) # 45
+
+np.zeros_like(x)
+NumPy配列xと同じ形状の配列で、その要素がすべて0の配列を生成する
+x = np.arange(9).reshape(3,3)
+# array([[0, 1, 2],
+#        [3, 4, 5],
+#        [6, 7, 8]])
+np.zeros_like(x)
+# array([[0, 0, 0],
+#        [0, 0, 0],
+#        [0, 0, 0]])
